@@ -2,8 +2,13 @@
 
 int main() {
     int n;
-    printf("Enter a natural number: ");
+    printf("Enter a natural number n (1 < n < 150): ");
     scanf("%d", &n);
+
+    if (n <= 1 || n >= 150) {
+        printf("Invalid input. Please enter a natural number n (1 < n < 150).\n");
+        return 0;
+    }
 
     int count = 0; // counter for equal divisors
 
